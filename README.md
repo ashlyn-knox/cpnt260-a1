@@ -1,5 +1,6 @@
 # CPNT260-a1 README
 Owner and Maintainer: Ashlyn Knox
+Github repo: https://github.com/ashlyn-knox/cpnt260-a1
 
 This webpage is for the Calgary based experimental jazz group, Midnight Zamboni.
 The band is preparing to release their first album and will be launching a cross Canada tour, this site is to be the main hub of content as they document their tour in real time.
