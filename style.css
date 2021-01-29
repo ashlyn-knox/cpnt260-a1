@@ -22,7 +22,7 @@
 
 img {
         object-fit: cover;
-        max-height: 20rem;
+        max-height: 12rem;
 }
 .thumbnail {
         width: 58px;
@@ -82,7 +82,6 @@ main > :nth-child(even) {
         "col1  col1"
         "col2  col3"
         "act   act";
-
 }
 
 .container-grid-photo > h2 {
@@ -94,13 +93,34 @@ main > :nth-child(even) {
 .container-grid-photo > :nth-child(3) {
         grid-area: col1;
         justify-self: center;
+        object-fit: stretch;
 }
 .container-grid-photo > button {
         grid-area: act;
 }
-/* Recipe Layout
+/* Recipe Layout*/
+.container-grid-recipe > :nth-child(1) {
+        text-align: center;
+        padding: 5rem;
+}
+.container-grid-recipe > :nth-child(4) {
+        border: solid 1px;
+        justify-content: center;
 
- * TODO FIX GRID LAYOUT
+}
+.container-grid-recipe > :nth-child(5) {
+        background-color: lightgrey;
+        padding: 5rem;
+        margin: 2rem 0;
+}
+.recipe-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+ /* TODO FIX GRID LAYOUT
 .recipe-images {
         display: grid;
         grid-template-columns: repeat(2, 50px max-content);
@@ -134,14 +154,8 @@ main > :nth-child(even) {
         justify-self: center;
         text-align: center;
 }
-.recipe-footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
 
-}
+*/
 /* header layout */
 .page-header {
         /* Change this in favour of an image or pattern */
@@ -317,20 +331,22 @@ nav {
                 grid-area: title;
         }
         .recipe-images {
+                justify-self: end;
                 display: grid;
                 grid-row-gap: 5px;
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
+                margin: 1rem;
 
                 grid-area: images;
         }
         .container-grid-recipe > aside {
                 grid-area: outline;
+                justify-self: start;
         }
         .container-grid-recipe > :nth-child(4) {
                 grid-area: ingrid;
-                border: solid 1px;
-                justify-content: center;
+                justify-self: start;
         }
 
         /*instructions steps*/
@@ -379,9 +395,7 @@ a {
         color: var(--white);
 }
 
-ul {
-        list-style-type: none;
-}
+
 button {
         width: 8rem;
         border-radius: 10px;
