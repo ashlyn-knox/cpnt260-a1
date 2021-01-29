@@ -23,12 +23,8 @@
                                 <span>Kira</span>
                                 <hr class="block">
                         </div>
-                        <!--TODO: These links will be visible on desktop and within the menu on mobile-->
                         <nav class="container-nav">
-                                <!--Set up this icon after everthing already feels good-->
-                           <!--     <input type="checkbox" id="nav-checkbox" name="menu">-->
-                                <!--<label for="nav-icon"><i class="fas fa-bars" id="nav-icon"></i></label>-->
-                                <!--site nav links-->
+                                <!--Used to be checkbox nav at mobile size, will instead implement with javascript-->
                                 <ul class="nav-links">
                                         <li><a href="#">About</a></li>
                                         <li><a href="gallery.html">Gallery</a></li>
@@ -36,10 +32,9 @@
                                         <li><a href="#">Recipes</a></li>
                                         <li><a href="https://github.com/ashlyn-knox">Contact</a></li>
                                 </ul>
-                                <!--login icon-->
                         </nav>
                 </div>
-                <!--desktop header will be a video of dogs playing, mobile version will use a static image.-->
+
                 <!--TODO: Add video and configure framerate-->
                 <header class="page-header">
                         <h1>a website that's gone to the dogs</h1>
@@ -64,9 +59,9 @@
                                 <section class="container-grid-photo">
                                         <h2>My Favourite Photos</h2>
                                         <p>Photogenic, right? I will be updating my site with many cute pictures like these.</p>
-                                        <img src="assets/images/grass-happy-kira-3.jpg" alt="">
-                                        <img src="assets/images/ears-kira.jpg" class="tall-rect-image" alt="">
-                                        <img src="assets/images/watchdog-kira-1.jpg" class="tall-rect-image" alt="">
+                                        <img src="assets/images/grass-happy-kira-3.jpg" class="gallery-photo"alt="">
+                                        <img src="assets/images/ears-kira.jpg" class="tall-rect-image" class="gallery-photo"alt="">
+                                        <img src="assets/images/watchdog-kira-1.jpg" class="gallery-photo" alt="">
 
 
                                         <div>
@@ -74,35 +69,33 @@
                                         </div>
                                 </section>
 
-                        <!--Recipe TODO: RECONSIDER MAIN HIERARCHY-->
-                        <section>
-                                <article class="container-grid-recipe">
+                        <section class="container-grid-recipe">
+                                <div>
+                                        <h2>Recipe<h2>
+                                                        <hr>
+                                                        <h3 class="big-h3">I Love Poultry Pour Over</h3>
+                                                        <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
+                                </div>
+                                <div class="recipe-images">
+                                        <div class="image-placeholder">Image</div>
                                         <div>
-                                                <h2>Recipe<h2>
-                                                                <hr>
-                                                                <h3 class="big-h3">I Love Poultry Pour Over</h3>
-                                                                <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
+                                                <!--TODO: Set up so the image block takes up central visual space-->
+                                                <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
+                                                <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
+                                                <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
                                         </div>
-                                        <div class="recipe-images">
-                                                <div class="image-placeholder">Image</div>
-                                                <div>
-                                                        <!--these images are slowing down the page really badly: I think it has to do with the resolution and quality-->
-                                                        <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
-                                                        <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
-                                                        <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
-                                                </div>
-                                        </div>
-                                        <aside>
-                                                <h3>Outline</h3>
-                                                <ul>
-                                                        <li>Prep: 20min</li>
+                                </div>
+                                <aside class="recipe-outline">
+                                        <h3>Outline</h3>
+                                        <ul>
+                                                <li>Prep: 20min</li>
                                                 <li>Cook: 1hr</li>
                                                 <li>Servings: 8 Meals</li>
                                         </ul>
                                 </aside>
- 
+
                                 <!--instruction steps-->
-                                <div>
+                                <div class="ingredients">
                                         <h3>Ingredients</h3>
                                         <ul>
                                                 <li>3Lbs Chicken or Turkey on the bone</li>
@@ -111,23 +104,24 @@
                                                 <li>water</li>
                                         </ul>
                                 </div>
-                                <div>
-                               <ol>
-                                        <li><h3>Prep the meat</h3>
-                                                <ul>
-                                                        <li>Boil meat in a large pot</li>
-                                                        <li>Cool meat and save bone water</li>
-                                                        <li>Debone and chop up</li>
-                                                </ul>
-                                        </li>
-                                        <li><h3>Prep Rice</h3>
-                                                <ul>
-                                                        <li>Boil rice in the bone water </br><srong>use more than the normal amount of water for making rice</strong></li>
-                                                        <li>puree the overcooked rice</li>
-                                                </ul>
-                                        </li>
-                                        <li><h3>Put it together</h3>
-                                                <ul>
+                                <article>
+
+                                        <ol>
+                                                <li><h3>Prep the meat</h3>
+                                                        <ul>
+                                                                <li>Boil meat in a large pot</li>
+                                                                <li>Cool meat and save bone water</li>
+                                                                <li>Debone and chop up</li>
+                                                        </ul>
+                                                </li>
+                                                <li><h3>Prep Rice</h3>
+                                                        <ul>
+                                                                <li>Boil rice in the bone water </br><srong>use more than the normal amount of water for making rice</strong></li>
+                                                                <li>puree the overcooked rice</li>
+                                                        </ul>
+                                                </li>
+                                                <li><h3>Put it together</h3>
+                                                        <ul>
                                                         <li>Mix the frozen vegetables, chopped meat, and rice together</li>
                                                         <li>Portion into 3 day batches</li>
                                                         <li>Let the pourover mixture cool</li>
@@ -135,7 +129,7 @@
                                                 </ul>
                                         </li>
                                 </ol>
-                                </div>
+                        </article>
                                 <!--Concluding Notes-->
                                 <div class="recipe-footer">
                                         <div class>
@@ -146,10 +140,10 @@
                                         <div><img src="assets/images/dog-eating-treat.jpg" alt=""></div>
                                         <button><a href="recipes.html">More Recipes!</a></button>
                                 </div>
-                        </article>
                         </section>
-                        <section class="container-conclusion">
+
                                 <!--Thank you section-->
+                        <section class="container-conclusion">
                                 <h2>Make a dog happy</h2>
                                 <!--Bone icon-->
                                 <i></i>
