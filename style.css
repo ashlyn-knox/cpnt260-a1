@@ -18,22 +18,54 @@ body {
         box-sizing: border-box;
         padding: 5rem;
         margin: auto;
-        display: block;
         background-color: var(--white);
 }
 
-.container-main {
+/* Layout Containers */
+
+.container-grid-basic {
+        justify-items: center;
+
         display: grid;
 }
 
-/* Desktop Display */
-@media screen and (min-width: 400px) {
-        .container-main {
+/*set about title ontop of its image*/
+.container-grid-basic :nth-child(-n+1) {
+        grid: 1 / -1;
+}
 
-        }
-        .nav-links {
-                flex-direction: 
-        }
+/* photo grid */
+.container-grid-photo {
+        display: grid;
+}
+.container-grid-photo :nth-child(-n+1) {
+        grid: 1 / -1;
+}
+
+/* recipe grid */
+.container-grid-recipe {
+
+        display: grid;
+}
+
+.recipe-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr 40px);
+        grid-template-rows: repeat(3, 40px);
+        grid-template-areas:
+        "primary row-1"
+        "primary row-2"
+        "primary row-3";
+}
+.recipe-images > :nth-child(1) {
+        grid-area: primary;
+}
+/* header layout */
+header .page-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 }
 
 /*Navigation*/
@@ -60,13 +92,69 @@ nav {
 
 .nav-links {
         padding: 0.5rem;
+
+        flex-direction: column;
 }
+
 /*TODO: Set up slow color on hover for all links -- nav links are to be faster, buttons slower*/
 .nav-links > a:hover {
         background-color: var(--purple);
         color: var(--white);
 }
+
 /*Nav Interaction*/
+
+
+/*********/
+/*Desktop*/
+/*********/
+@media screen and (min-width: 400px) {
+        /* basic layout */
+        .container-grid-basic {
+        }
+        /*photos layout*/
+        .container-grid-photo {
+
+                grid-template-areas: 
+                "title title title"
+                "col-1 col-2 col-3"
+                "act   act   act";
+        }
+        .container-grid-photo > :nth-child(-n+1) {
+                grid: 1 / -1;
+        }
+        .container-grid-photo > :nth-child(6) {
+                grid: 1 / -1;
+        }
+
+        /* recipe layout*/
+        .container-grid-recipe {
+                grid-template-columns: 2fr 1fr;
+        }
+        .container-grid-recipe > :nth-child(1) {
+                grid: 1 / -2;
+        }
+        .recipe-images {
+                grid: 1 / 2;
+
+                grid-template-columns: repeat(3, 5rem);
+        }
+
+        .container-grid-recipe > :nth-child(3) {
+                grid: 2 / -1;
+        }
+        .container-grid-recipe > :nth-child(6) {
+                grid: 1 / -1;
+        }
+        .recipe-items > :nth-child(1) {
+                grid: 1 / -1;
+        }
+        /* Nav Links Desktop*/
+        .nav-links {
+                flex-direction: row;
+        }
+
+}
 /************/
 /*Typography*/
 /************/
@@ -85,9 +173,4 @@ ul {
         list-style-type: none;
 }
 /*User Interaction*/
-a:hover {
 
-}
-a:active {
-
-}
