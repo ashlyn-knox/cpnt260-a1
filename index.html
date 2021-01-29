@@ -1,168 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Good Girl Kira</title>
-                <link rel="preload" href="style.css" as="style">
-                <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Girl Kira</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="stylesheet" href="style.css">
 
-                <!--Fonts-->
-                <link rel="preconnect" href="https://fonts.gstatic.com">
-                <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap" rel="stylesheet"> 
-                <!--Icons-->
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        </head>
-        <body>
-                <!--Navigation-->
-                <div class="top-bar">
-                        <a href="index.html" class="site-logo">
-                                <img src="assets/images/tree-kira-3.jpg" class="logo" alt="kira infront of a tree">
-                                <span>Good</span>
-                                <span>Girl</span>
-                                <span>Kira</span>
-                                <hr class="block">
-                        </a>
-                        <nav class="container-nav">
-                                <!--Used to be checkbox nav at mobile size, will instead implement with javascript-->
-                                <ul class="nav-links">
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Recipes</a></li>
-                                        <li><a href="https://github.com/ashlyn-knox">Contact</a></li>
-                                </ul>
-                        </nav>
-                </div>
-                <!--Hero Section-->
-                <header class="page-header">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap" rel="stylesheet"> 
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 
-                        <!--TODO: Add video and configure framerate-->
-                        <h1>a website that's gone to the dogs</h1>
-                        <button class="pop-button"><a href="#">Register</a></button>
-                </header>
-                <!--Main Content-->
-                <main>
-                        <!--About-->
-                        <section class="container-about">
-                                <div>
-                                        <h2>I'm Kira</h2>
-                                        <p>Hey, I'm Kira! and I consider myself an expert on all things doggy delicious and fun. My two humans live with me, they make special food just for me and take me to the best spots in Calgary</p>
-                                        <p>My page is <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">full of cool dog stuff. From <strong>recipes</strong> that your dog is bound to love to <strong>reviews</strong> of Calgary's dog parks, to <strong>amazing stories</strong> from my adventures; I've got it all.</p>
-                                        <img src="assets/images/computer-kira-4.jpg" class="about-picture" alt="Kira sitting behind a laptop">
+  <body>
 
-                                </div>
-                                <!--Create a hierarchy of breadcrumbs to lead the user down the site, have one of those here-->
-                        </section>
+    <!--Navigation-->
+    <div class="top-bar">
+      <a href="index.html">
+        <div class="site-logo">
+          <img src="assets/images/tree-kira-3.jpg" class="logo" alt="kira infront of a tree">
+          <span>Good</span>
+          <span>Girl</span>
+          <span>Kira</span>
+          <hr class="block">
+        </div>
+      </a>
 
-                        <!--Gallery Teaser-->
-                        <section class="container-grid-photo">
-                                <!--To be replaced with by a blog update space-->
-                                <h2>My Favourite Photos</h2>
-                                <p>Photogenic, right? I will be updating my site with many cute pictures like these.</p>
-                                <img src="assets/images/grass-happy-kira-3.jpg" class="gallery-photo"alt="">
-                                <img src="assets/images/ears-kira.jpg" class="tall-rect-image" class="gallery-photo"alt="">
-                                <img src="assets/images/watchdog-kira-1.jpg" class="gallery-photo" alt="">
+      <nav class="container-nav">
+        <!-- I previously used to be checkbox nav at mobile size, will instead implement with javascript-->
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Recipes</a></li>
+          <li><a href="https://github.com/ashlyn-knox">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
+    </div>
 
+    <!--Hero Section-->
+    <header class="page-header">
 
-                                <div>
-                                        <button><a href="gallery.html">More Cuteness</a></button>
-                                </div>
-                        </section>
-                        <!--Recipe Section-->
+      <!--TODO: Add video and configure framerate-->
+      <h1>a website that's gone to the dogs</h1>
+      <button class="pop-button"><a href="#">Register</a></button>
+    </header>
 
-                        <!--This will be on it's own page and replaced with a grid of cards for each recipe-->
-                        <section class="container-grid-recipe">
+    <!--Main Content-->
+    <main>
+      <!--About-->
+      <section class="container-about">
+          <h2>I'm Kira</h2>
+          <p>Hey, I'm Kira! and I consider myself an expert on all things doggy delicious and fun. My two humans live with me, they make special food just for me and take me to the best spots in Calgary</p>
+          <p>My page is <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">full of cool dog stuff. From <strong>recipes</strong> that your dog is bound to love to <strong>reviews</strong> of Calgary's dog parks, to <strong>amazing stories</strong> from my adventures; I've got it all.</p>
+          <img src="assets/images/computer-kira-4.jpg" class="about-picture" alt="Kira sitting behind a laptop">
+        <!--Create a hierarchy of breadcrumbs to lead the user down the site, have one of those here-->
+      </section>
 
-                                <!--Title-->
-                                <div>
-                                        <h2>Recipe<h2>
-                                                        <hr>
-                                                        <h3 class="big-h3">I Love Poultry Pour Over</h3>
-                                                        <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
-                                </div>
-                                <!--Overview-->
-                                <div class="recipe-images">
-                                        <div class="image-placeholder">Image</div>
-                                        <div>
-                                                <!--TODO: Set up so the image block takes up central visual space-->
-                                                <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
-                                                <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
-                                                <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
-                                        </div>
-                                </div>
+      <!--Gallery Teaser-->
+      <section class="container-grid-photo">
+        <!--To be replaced with by a blog update space-->
+        <h2>My Favourite Photos</h2>
+        <p>Photogenic, right? I will be updating my site with many cute pictures like these.</p>
+        <img src="assets/images/grass-happy-kira-3.jpg" class="gallery-photo"alt="">
+        <img src="assets/images/ears-kira.jpg" class="tall-rect-image" class="gallery-photo"alt="">
+        <img src="assets/images/watchdog-kira-1.jpg" class="gallery-photo" alt="">
+        <div>
+          <button><a href="gallery.html">More Cuteness</a></button>
+        </div>
+      </section>
 
-                                <aside class="recipe-outline">
-                                        <h3>Outline</h3>
-                                        <ul>
-                                                <li>Prep: 20min</li>
-                                                <li>Cook: 1hr</li>
-                                                <li>Servings: 8 Meals</li>
-                                        </ul>
-                                </aside>
+      <!--Recipe Section-->
 
-                                <!--Ingredients-->
-                                <div class="ingredients">
-                                        <h3>Ingredients</h3>
-                                        <ul>
-                                                <li>3Lbs Chicken or Turkey on the bone</li>
-                                                <li>1 cup of frozen vegetables</li>
-                                                <li>1 cup of whole grain rice</li>
-                                                <li>water</li>
-                                        </ul>
-                                </div>
-                                <!--Instructions-->
-                                <article>
+      <!--This will be on it's own page and replaced with a grid of cards for each recipe-->
+      <section class="container-grid-recipe">
+        <!--Title-->
+        <div>
+          <h2>Recipe<h2>
+              <hr>
+              <h3 class="big-h3">I Love Poultry Pour Over</h3>
+              <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better.</p>
+        </div>
+        <!--Overview-->
+        <div class="recipe-images">
+          <div class="image-placeholder">Image</div>
+          <div>
+            <!--TODO: Set up so the image block takes up central visual space-->
+            <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
+            <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
+            <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
+          </div>
+        </div>
 
-                                        <ol>
-                                                <li><h3>Prep the meat</h3>
-                                                        <ul>
-                                                                <li>Boil meat in a large pot</li>
-                                                                <li>Cool meat and save bone water</li>
-                                                                <li>Debone and chop up</li>
-                                                        </ul>
-                                                </li>
-                                                <li><h3>Prep Rice</h3>
-                                                        <ul>
-                                                                <li>Boil rice in the bone water </br><srong>use more than the normal amount of water for making rice</strong></li>
-                                                                <li>puree the overcooked rice</li>
-                                                        </ul>
-                                                </li>
-                                                <li><h3>Put it together</h3>
-                                                        <ul>
-                                                                <li>Mix the frozen vegetables, chopped meat, and rice together</li>
-                                                                <li>Portion into 3 day batches</li>
-                                                                <li>Let the pourover mixture cool</li>
-                                                                <li>Freeze anything that you won't use in the next 3 days</li>
-                                                        </ul>
-                                                </li>
-                                        </ol>
-                                </article>
-                                <!--Concluding Notes-->
-                                <div class="recipe-footer">
-                                        <div class>
-                                                <h3>Yummy Yummy!</h3>
-                                                <p>This is literally my favourite thing. My humans pour it over my kibble and then I always finish my dinner.</p>
-                                                <p>If you are interested in more food ideas, check out my recipes page!</p>
-                                        </div>
-                                        <div><img src="assets/images/dog-eating-treat.jpg" alt=""></div>
-                                        <button><a href="recipes.html">More Recipes!</a></button>
-                                </div>
-                        </section>
+        <aside class="recipe-outline">
+          <h3>Outline</h3>
+          <ul>
+            <li>Prep: 20min</li>
+            <li>Cook: 1hr</li>
+            <li>Servings: 8 Meals</li>
+          </ul>
+        </aside>
 
-                        <!--Thank you section-->
-                        <section class="container-conclusion">
-                                <h2>Make a dog happy</h2>
-                                <!--Bone icon-->
-                                <i></i>
-                                <p>I am so excited for you to laugh and learn from my exploits. If you like my content, you can buy me a bone. It'll make me a real happy hound!</p>
-                                <button><a href="#">Buy Me a bone</a></button>
-                        </section>
-                </main>
-                <!--Footer-->
-                <footer>
-                        <!--Copyright Information-->
-                        <p>Ashlyn Knox 29-01-2021 &#169;</p>
-                </footer>
-        </body>
+        <!--Ingredients-->
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>3Lbs Chicken or Turkey on the bone</li>
+            <li>1 cup of frozen vegetables</li>
+            <li>1 cup of whole grain rice</li>
+            <li>water</li>
+          </ul>
+        </div>
+        <!--Instructions-->
+        <article>
+
+          <ol>
+            <li><h3>Prep the meat</h3>
+              <ul>
+                <li>Boil meat in a large pot</li>
+                <li>Cool meat and save bone water</li>
+                <li>Debone and chop up</li>
+              </ul>
+            </li>
+            <li><h3>Prep Rice</h3>
+              <ul>
+                <li>Boil rice in the bone water </br><srong>use more than the normal amount of water for making rice</strong></li>
+                <li>puree the overcooked rice</li>
+              </ul>
+            </li>
+            <li><h3>Put it together</h3>
+              <ul>
+                <li>Mix the frozen vegetables, chopped meat, and rice together</li>
+                <li>Portion into 3 day batches</li>
+                <li>Let the pourover mixture cool</li>
+                <li>Freeze anything that you won't use in the next 3 days</li>
+              </ul>
+            </li>
+          </ol>
+        </article>
+        <!--Concluding Notes-->
+        <div class="recipe-footer">
+          <div class>
+            <h3>Yummy Yummy!</h3>
+            <p>This is literally my favourite thing. My humans pour it over my kibble and then I always finish my dinner.</p>
+            <p>If you are interested in more food ideas, check out my recipes page!</p>
+          </div>
+          <div><img src="assets/images/dog-eating-treat.jpg" alt=""></div>
+          <button><a href="recipes.html">More Recipes!</a></button>
+        </div>
+      </section>
+
+      <!--Thank you section-->
+      <section class="container-conclusion">
+        <h2>Make a dog happy</h2>
+        <!--Bone icon-->
+        <i></i>
+        <p>I am so excited for you to laugh and learn from my exploits. If you like my content, you can buy me a bone. It'll make me a real happy hound!</p>
+        <button><a href="#">Buy Me a bone</a></button>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <!--Copyright Information-->
+      <p>Ashlyn Knox 29-01-2021 &#169;</p>
+    </footer>
+  </body>
 </html>

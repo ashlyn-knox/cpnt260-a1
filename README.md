@@ -1,8 +1,8 @@
 # CPNT260-a1 
 
 * *Author and Maintainer: Ashlyn Knox
-* Github Repo:
-* Github Pages:
+* Github Repo: https://github.com/ashlyn-knox/cpnt260-a1
+* Github Pages: ashlyn-knox.github.io/cpnt260-a1
 
 ## Client Information
 This site is being made for a couple of dog owners. Their want to run a website from which they can have fun blogging about dog care and daily experiences from the perspective of their dog Kira.
@@ -29,3 +29,13 @@ They clients have decided that if they enjoy using it, they would like to expand
 * [Cat Tree Kira](https://github.com/ashlyn-knox/cpnt260-a1/blob/main/assets/images/cat-tree-kira-3.jpg) by [Ashlyn Knox](https://github.com/ashlyn-knox) is under a [MIT license](https://mit-license.org)
 * [Basketball Kira](https://github.com/ashlyn-knox/cpnt260-a1/blob/main/assets/images/basketball-kira-4.jpg) by [Ashlyn Knox](https://github.com/ashlyn-knox) is under a [MIT license](https://mit-license.org)
 * [Ears Kira](https://github.com/ashlyn-knox/cpnt260-a1/blob/main/assets/images/ears-kira.jpg) by [Ashlyn Knox](https://github.com/ashlyn-knox) is under a [MIT license](https://mit-license.org)
+
+## Site Review Notes
+
+### CSS
+* Site Logo Design -- Line 12
+* Footer Design -- Line 178
+* Site Navigation -- Line 112
+ * I placed the Registration call to action within the Hero section. It made the header feel cluttered and draws attention better in its current position.
+
+### HTML
