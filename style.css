@@ -3,69 +3,103 @@
 /*****************/
 :root {
         --lightGreen: hsla(120, 77%, 93%, 0.7);
-        --green: hsla(120, 70%, 95%, 1);
+        --green: hsla(120, 70%, 70%, 1);
         --white: hsl(268, 2%, 95%);
-        --purple: hsl(268, 70%, 95%);
+        --purple: hsl(268, 70%, 70%);
+        --black: hsl(0, 100%, 2%);
+
+        --bright: 100%;
 }
 /*Images and Shapes*/
-
-
+img {
+        max-width: 10rem;
+}
+.thumbnail {
+        object-fit: cover;
+        width: 50px;
+}
+.logo {
+        width: 40px;
+        max-height: 40px;
+        object-fit: cover;
+}
 /********/
 /*Layout*/
 /********/
          
 body {
         box-sizing: border-box;
-        padding: 5rem;
         margin: auto;
+        padding: 0;
         background-color: var(--white);
 }
-
-/* Layout Containers */
-
-.container-grid-basic {
-        justify-items: center;
-
-        display: grid;
-}
-
-/*set about title ontop of its image*/
-.container-grid-basic :nth-child(-n+1) {
-        grid: 1 / -1;
-}
-
-/* photo grid */
-.container-grid-photo {
-        display: grid;
-}
-.container-grid-photo :nth-child(-n+1) {
-        grid: 1 / -1;
-}
-
-/* recipe grid */
-.container-grid-recipe {
-
-        display: grid;
-}
-
-.recipe-images {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr 40px);
-        grid-template-rows: repeat(3, 40px);
-        grid-template-areas:
-        "primary row-1"
-        "primary row-2"
-        "primary row-3";
-}
-.recipe-images > :nth-child(1) {
-        grid-area: primary;
-}
-/* header layout */
-header .page-header {
+main {
+        margin: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+}
+/* Layout Containers */
+
+/*.container-grid-basic {*/
+        /*justify-items: center;*/
+
+        /*display: grid;*/
+/*}*/
+
+/*[>set about title ontop of its image<]*/
+/*.container-grid-basic :nth-child(-n+1) {*/
+        /*grid: 1 / -1;*/
+/*}*/
+
+/*[> photo grid <]*/
+/*.container-grid-photo {*/
+        /*display: grid;*/
+/*}*/
+/*.container-grid-photo :nth-child(-n+1) {*/
+        /*grid: 1 / -1;*/
+/*}*/
+
+/*[> recipe grid <]*/
+/*.container-grid-recipe {*/
+
+        /*display: grid;*/
+/*}*/
+
+/*.recipe-images {*/
+        /*display: grid;*/
+        /*grid-template-columns: repeat(2, 1fr 40px);*/
+        /*grid-template-rows: repeat(3, 40px);*/
+        /*grid-template-areas:*/
+        /*"primary row-1"*/
+        /*"primary row-2"*/
+        /*"primary row-3";*/
+/*}*/
+/*.recipe-images > :nth-child(1) {*/
+        /*grid-area: primary;*/
+/*}*/
+/* header layout */
+.page-header {
+        /* Change this in favour of an image or pattern */
+        background-color: var(--green);
+        height: 10rem;
+        padding: 0 0 4rem 0;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+}
+
+footer {
+        background-color: var(--black);
+        color: var(--white);
+        min-height: 15rem;
+        max-height: 20rem;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
 }
 
 /*Navigation*/
@@ -76,98 +110,119 @@ nav {
 
 }
 
-.topbar {
+.top-bar {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: row;
+        background-color: var(--black);
 }
-.topbar > * {
+.site-logo {
+        align-self: center;
+        display:grid;
+        padding: 2rem;
+        align-items: start;
         margin: 0;
-        background-color: var(--lightGreen);
-        display: flex;
-}
 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "two  one"
+        "two  three"
+        "five four"
+}
+.site-logo > :nth-child(1) {
+        grid-area: two;
+        align-self: center;
+}
+.site-logo > :nth-child(2) {
+        grid-area: one;
+        justify-self: end;
+}
+.site-logo > :nth-child(3) {
+        grid-area: three;
+        justify-self: end;
+}
+.site-logo > :nth-child(4) {
+        grid-area: four;
+        justify-self:end;
+}
+.site-logo > :nth-child(5) {
+        grid-area: five;
+        height: 8px;
+        width: 39px;
+        color: var(--white);
+        background-color: hsl(218, 4%, 87%);
+        align-self: center;
+        margin: 0;
+        flex-shrink: 1;
+
+}
 .container-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         flex-grow: 1;
 }
 
 .nav-links {
-        padding: 0.5rem;
-
+        display: flex;
         flex-direction: column;
+        color: white;
+        font-size: 12px;
+        margin-right: 1rem;
 }
 
 /*TODO: Set up slow color on hover for all links -- nav links are to be faster, buttons slower*/
-.nav-links > a:hover {
-        background-color: var(--purple);
-        color: var(--white);
-}
-
-/*Nav Interaction*/
-
 
 /*********/
 /*Desktop*/
 /*********/
-@media screen and (min-width: 400px) {
-        /* basic layout */
-        .container-grid-basic {
+@media screen and (min-width: 35rem) {
+    
+.nav-links {
+        flex-direction: row;
+        justify-content: end;
         }
-        /*photos layout*/
-        .container-grid-photo {
-
-                grid-template-areas: 
-                "title title title"
-                "col-1 col-2 col-3"
-                "act   act   act";
+       .page-header {
+                height: 30rem;
+                width: 100vw;
         }
-        .container-grid-photo > :nth-child(-n+1) {
-                grid: 1 / -1;
-        }
-        .container-grid-photo > :nth-child(6) {
-                grid: 1 / -1;
-        }
-
-        /* recipe layout*/
-        .container-grid-recipe {
-                grid-template-columns: 2fr 1fr;
-        }
-        .container-grid-recipe > :nth-child(1) {
-                grid: 1 / -2;
-        }
-        .recipe-images {
-                grid: 1 / 2;
-
-                grid-template-columns: repeat(3, 5rem);
-        }
-
-        .container-grid-recipe > :nth-child(3) {
-                grid: 2 / -1;
-        }
-        .container-grid-recipe > :nth-child(6) {
-                grid: 1 / -1;
-        }
-        .recipe-items > :nth-child(1) {
-                grid: 1 / -1;
-        }
-        /* Nav Links Desktop*/
-        .nav-links {
-                flex-direction: row;
-        }
-
 }
 /************/
 /*Typography*/
 /************/
 
 h1, h2, h3, button {
-        font-family: sans-serif;
+        font-family: 'Lato', sans-serif;
 }
 
 p, li, a, figcaption {
-        font-family: sans-serif;
+        font-family: 'Open Sans', sans-serif;
+}
+p {
+        max-width: 95ch;
 }
 a {
         text-decoration: none;
+}
+.nav-links a {
+        color: var(--white);
+        font-weight: 500;
+        font-size: 20px;
+        padding: 10px;
+}
+.nav-links li {
+        margin: 5px;
+}
+.nav-links a:hover {
+        background-color: var(--purple);
+        color: hsl(268, 0%, 100%);
+
+}
+.site-logo span {
+        color: var(--white);
 }
 ul {
         list-style-type: none;
