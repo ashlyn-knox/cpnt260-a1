@@ -7,77 +7,141 @@
         --white: hsl(268, 2%, 95%);
         --purple: hsl(268, 70%, 70%);
         --black: hsl(0, 100%, 2%);
-
-        --bright: 100%;
 }
 /*Images and Shapes*/
+.image-placeholder {
+        width: calc(61.33*3px);
+        height: 10rem;
+        background-color: var(--purple);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+}
+
 img {
-        max-width: 10rem;
+        object-fit: cover;
+        max-height: 20rem;
 }
 .thumbnail {
-        object-fit: cover;
-        width: 50px;
+        width: 58px;
 }
 .logo {
         width: 40px;
         max-height: 40px;
         object-fit: cover;
+        justify-self: flex-start;
 }
+
 /********/
 /*Layout*/
 /********/
          
 body {
         box-sizing: border-box;
-        margin: auto;
+        margin: 0;
         padding: 0;
         background-color: var(--white);
 }
+body > * {
+        width: 100vw;
+}
 main {
-        margin: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin: 0;
+}
+
+main > :nth-child(even) {
+        margin: 0;
+        background-color: var(--green);
 }
 /* Layout Containers */
 
-/*.container-grid-basic {*/
-        /*justify-items: center;*/
+.container-grid-about {
+        padding: 5rem 0 5rem 0;
 
-        /*display: grid;*/
-/*}*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+}
+.container-grid-photo {
+        padding: 5rem;
+        text-align: center;
+        justify-content: center;
+/*Improve wrapping and setup of this. the images aren't moving as expected atm*/
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
 
-/*[>set about title ontop of its image<]*/
-/*.container-grid-basic :nth-child(-n+1) {*/
-        /*grid: 1 / -1;*/
-/*}*/
+        grid-template-areas:
+        "title title"
+        "text  text"
+        "col1  col1"
+        "col2  col3"
+        "act   act";
 
-/*[> photo grid <]*/
-/*.container-grid-photo {*/
-        /*display: grid;*/
-/*}*/
-/*.container-grid-photo :nth-child(-n+1) {*/
-        /*grid: 1 / -1;*/
-/*}*/
+}
 
-/*[> recipe grid <]*/
-/*.container-grid-recipe {*/
+.container-grid-photo > h2 {
+        grid-area: title;
+}
+.container-grid-photo > p {
+        grid-area: text;
+}
+.container-grid-photo > :nth-child(3) {
+        grid-area: col1;
+        justify-self: center;
+}
+.container-grid-photo > button {
+        grid-area: act;
+}
+/* Recipe Layout
 
-        /*display: grid;*/
-/*}*/
+ * TODO FIX GRID LAYOUT
+.recipe-images {
+        display: grid;
+        grid-template-columns: repeat(2, 50px max-content);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "a  b"
+        "a  c"
+        "a  d";
+}
 
-/*.recipe-images {*/
-        /*display: grid;*/
-        /*grid-template-columns: repeat(2, 1fr 40px);*/
-        /*grid-template-rows: repeat(3, 40px);*/
-        /*grid-template-areas:*/
-        /*"primary row-1"*/
-        /*"primary row-2"*/
-        /*"primary row-3";*/
-/*}*/
-/*.recipe-images > :nth-child(1) {*/
-        /*grid-area: primary;*/
-/*}*/
+.recipes-images > :nth-child(1) {
+        grid-area: a;
+}
+.recipes-images > :nth-child(2) {
+        grid-area: b;
+}
+.recipes-images > :nth-child(3) {
+        grid-area: c;
+}
+.recipes-images > :nth-child(4) {
+        grid-area: d;
+}
+
+.container-grid-recipe {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+}
+.container-grid-recipe > :nth-child(1) {
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+}
+.recipe-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+}
 /* header layout */
 .page-header {
         /* Change this in favour of an image or pattern */
@@ -96,12 +160,18 @@ footer {
         color: var(--white);
         min-height: 15rem;
         max-height: 20rem;
-
+        max-width: 100vw;
         display: flex;
         align-items: flex-end;
         justify-content: center;
 }
 
+.container-conclusion {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
 /*Navigation*/
 
 nav {
@@ -121,12 +191,9 @@ nav {
 .site-logo {
         align-self: center;
         display:grid;
-        padding: 2rem;
-        align-items: start;
-        margin: 0;
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        grid-template-columns: max-content max-content;
+        grid-template-rows: repeat(3, 1rem);
         grid-template-areas:
         "two  one"
         "two  three"
@@ -134,7 +201,6 @@ nav {
 }
 .site-logo > :nth-child(1) {
         grid-area: two;
-        align-self: center;
 }
 .site-logo > :nth-child(2) {
         grid-area: one;
@@ -150,15 +216,15 @@ nav {
 }
 .site-logo > :nth-child(5) {
         grid-area: five;
-        height: 8px;
+        height: 5px;
         width: 39px;
         color: var(--white);
         background-color: hsl(218, 4%, 87%);
         align-self: center;
-        margin: 0;
+        justify-self: center;
         flex-shrink: 1;
-
 }
+
 .container-nav {
         display: flex;
         justify-content: flex-end;
@@ -169,27 +235,113 @@ nav {
 .nav-links {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
         color: white;
         font-size: 12px;
         margin-right: 1rem;
 }
 
-/*TODO: Set up slow color on hover for all links -- nav links are to be faster, buttons slower*/
+/*TODO: Set up keyframes for slow color on hover for all links -- nav links are to be faster, buttons slower*/
 
 /*********/
 /*Desktop*/
 /*********/
+
 @media screen and (min-width: 35rem) {
-    
-.nav-links {
-        flex-direction: row;
-        justify-content: end;
+
+        .nav-links {
+                flex-direction: row;
+                justify-content: end;
         }
-       .page-header {
+
+        .page-header {
                 height: 30rem;
-                width: 100vw;
+        }
+        .container-grid-photo {
+                margin: 0;
+                grid-template-columns: repeat(3, min-content);
+                grid-gap: 20px;
+                max-width: 100vw;
+                justify-content: center;
+
+                display: grid;
+                grid-template-areas:
+                "title title title"
+                "text  text   text"
+                "col1  col2  col3"
+                ".   act     .";
+        }       
+        .container-grid-photo > :nth-child(1) {
+                text-align: center;
+
+                grid-area: title;
+                justify-items: center;
+        }
+        .container-grid-photo > :nth-child(2) {
+                grid-area: text;
+                text-align: center;
+        }
+        .container-grid-photo > :nth-child(3) {
+                grid-area: col1;
+        }
+        .container-grid-photo > :nth-child(4) {
+                grid-area: col3;
+                object-fit: cover;
+        }
+        .container-grid-photo > :nth-child(5) {
+                grid-area: col2;
+        }
+        .container-grid-photo > :nth-child(6) {
+                grid-area: act;
+                justify-content: center;
+                text-align: center;
+        }
+        /* Recipes */
+        .container-grid-recipe {
+                margin: auto;
+                justify-self: center;
+                max-width: 50rem;
+
+                justify-content: center;
+
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                "title  title"
+                "images outline"
+                "ingrid ."
+                "steps  steps"
+                "foot   foot";
+        }
+        .container-grid-recipe > :nth-child(1) {
+                grid-area: title;
+        }
+        .recipe-images {
+                display: grid;
+                grid-row-gap: 5px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+
+                grid-area: images;
+        }
+        .container-grid-recipe > aside {
+                grid-area: outline;
+        }
+        .container-grid-recipe > :nth-child(4) {
+                grid-area: ingrid;
+                border: solid 1px;
+                justify-content: center;
+        }
+
+        /*instructions steps*/
+        .container-grid-recipe > :nth-child(5) {
+                grid-area: steps;
+        }
+        .recipe-footer {
+                grid-area: foot;
         }
 }
+
 /************/
 /*Typography*/
 /************/
@@ -198,7 +350,7 @@ h1, h2, h3, button {
         font-family: 'Lato', sans-serif;
 }
 
-p, li, a, figcaption {
+p, li, a {
         font-family: 'Open Sans', sans-serif;
 }
 p {
@@ -206,6 +358,8 @@ p {
 }
 a {
         text-decoration: none;
+
+/* Links */
 }
 .nav-links a {
         color: var(--white);
@@ -224,8 +378,14 @@ a {
 .site-logo span {
         color: var(--white);
 }
+
 ul {
         list-style-type: none;
+}
+button {
+        width: 8rem;
+        border-radius: 10px;
+        margin: 10px;
 }
 /*User Interaction*/
 

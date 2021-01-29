@@ -44,9 +44,10 @@
                         <h1>Welcome Home</h1>
                         <button><a href="#">Register</a></button>
                 </header>
+                <!--CSS Section naming conventions needs to be adjusted-->
                 <main>
                         <!--About-->
-                        <section class="container-grid-basic">
+                        <section class="container-grid-about">
                                 <h2>Meet Kira</h2>
                                 <img src="assets/images/computer-kira-4.jpg" class="" alt="Kira sitting behind a laptop">
                                 <div>
@@ -57,47 +58,36 @@
                         </section>
 
                         <!--Gallery Teaser-->
-                        <!--To be replaced with by a blog update space-->
-                        <section class="container-grid-photo">
-                                <h2>My Favourite Photos</h2>
-                                <img src="assets/images/grass-happy-kira-3.jpg" alt="">
-                                <figure>
-                                        <img src="assets/images/cat-tree-kira-2.jpg" class="tall-rect-image" alt="">
-
-                                        <figcaption>When I was a baby, I thought I was a cat.</figcaption>
-                                </figure>
-                                <figure>
+                                <!--To be replaced with by a blog update space-->
+                                <section class="container-grid-photo">
+                                        <h2>My Favourite Photos</h2>
+                                        <p>Photogenic, right? I will be updating my site with many cute pictures like these.</p>
+                                        <img src="assets/images/grass-happy-kira-3.jpg" alt="">
                                         <img src="assets/images/ears-kira.jpg" class="tall-rect-image" alt="">
-                                        <figcaption>Look at my fabulous ears!</figcaption>
-                                </figure>
-                                <figure>
                                         <img src="assets/images/watchdog-kira-1.jpg" class="tall-rect-image" alt="">
-                                        <figcaption>I am an amazing guard dog.</figcaption>
-                                </figure>
 
 
-                                <button><a href="gallery.html">More Cuteness</a></button>
-                        </section>
+                                        <div>
+                                        <button><a href="gallery.html">More Cuteness</a></button>
+                                        </div>
+                                </section>
 
-                        <!--Recipe-->
+                        <!--Recipe TODO: RECONSIDER MAIN HIERARCHY-->
+                        <section>
                         <article class="container-grid-recipe">
                                 <div>
                                         <h2>I Love Poultry Pour Over</h2>
                                         <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
                                 </div>
-                                <!--recipe gallery-->
-                                <!--Waiting on pictures of actual completed recipe-->
                                 <div class="recipe-images">
-                                        <!--TODO CREATE PLACEHOLDER IMAGE-->
-                                        <div class="image-placeholder"></div>
+                                        <div class="image-placeholder">Image</div>
                                         <div>
-
-                                        <img src="assets/images/uncooked-rice.jpg" class="thumbnail" alt="Uncooked Rice">
-                                        <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
-                                        <img src="asset/images/sweet-potatos.jpg" class="small-image" alt="Sweet Potatos">
+                                                <!--these images are slowing down the page really badly: I think it has to do with the resolution and quality-->
+                                                <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
+                                                <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
+                                                <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
                                         </div>
                                 </div>
-                                <!--Recipe Logistics-->
                                 <aside>
                                         <h3>Outline</h3>
                                         <ul>
@@ -143,8 +133,8 @@
                                 </ol>
                                 </div>
                                 <!--Concluding Notes-->
-                                <div>
-                                        <div>
+                                <div class="recipe-footer">
+                                        <div class>
                                                 <h3>Yummy Yummy!</h3>
                                                 <p>This is literally my favourite thing. My humans pour it over my kibble and then I always finish my dinner.</p>
                                                 <p>If you are interested in more food ideas, check out my recipes page!</p>
@@ -153,14 +143,15 @@
                                         <button><a href="recipes.html">More Recipes!</a></button>
                                 </div>
                         </article>
-                        <div>
+                        </section>
+                        <section class="container-conclusion">
                                 <!--Thank you section-->
                                 <h2>Make a dog happy</h2>
                                 <!--Bone icon-->
                                 <i></i>
                                 <p>I am so excited for you to laugh and learn from my exploits. If you like my content, you can buy me a bone. It'll make me a real happy hound!</p>
                                 <button><a href="#">Buy Me a bone</a></button>
-                        </div>
+                        </section>
                         <!--Copyright information-->
                 </main>
                 <footer>
