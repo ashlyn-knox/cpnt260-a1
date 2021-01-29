@@ -1,0 +1,93 @@
+/******************/
+/*Custom Variables*/
+/*****************/
+:root {
+        --lightGreen: hsla(120, 77%, 93%, 0.7);
+        --green: hsla(120, 70%, 95%, 1);
+        --white: hsl(268, 2%, 95%);
+        --purple: hsl(268, 70%, 95%);
+}
+/*Images and Shapes*/
+
+
+/********/
+/*Layout*/
+/********/
+         
+body {
+        box-sizing: border-box;
+        padding: 5rem;
+        margin: auto;
+        display: block;
+        background-color: var(--white);
+}
+
+.container-main {
+        display: grid;
+}
+
+/* Desktop Display */
+@media screen and (min-width: 400px) {
+        .container-main {
+
+        }
+        .nav-links {
+                flex-direction: 
+        }
+}
+
+/*Navigation*/
+
+nav {
+        /*for older browsers*/
+        display: inline;
+
+}
+
+.topbar {
+        display: flex;
+        flex-direction: row;
+}
+.topbar > * {
+        margin: 0;
+        background-color: var(--lightGreen);
+        display: flex;
+}
+
+.container-nav {
+        flex-grow: 1;
+}
+
+.nav-links {
+        padding: 0.5rem;
+}
+/*TODO: Set up slow color on hover for all links -- nav links are to be faster, buttons slower*/
+.nav-links > a:hover {
+        background-color: var(--purple);
+        color: var(--white);
+}
+/*Nav Interaction*/
+/************/
+/*Typography*/
+/************/
+
+h1, h2, h3, button {
+        font-family: sans-serif;
+}
+
+p, li, a, figcaption {
+        font-family: sans-serif;
+}
+a {
+        text-decoration: none;
+}
+ul {
+        list-style-type: none;
+}
+/*User Interaction*/
+a:hover {
+
+}
+a:active {
+
+}
