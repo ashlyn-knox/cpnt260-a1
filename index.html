@@ -14,15 +14,15 @@
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
-                <!--navigation-->
+                <!--Navigation-->
                 <div class="top-bar">
-                        <div class="site-logo">                                
+                        <a href="index.html" class="site-logo">
                                 <img src="assets/images/tree-kira-3.jpg" class="logo" alt="kira infront of a tree">
                                 <span>Good</span>
                                 <span>Girl</span>
                                 <span>Kira</span>
                                 <hr class="block">
-                        </div>
+                        </a>
                         <nav class="container-nav">
                                 <!--Used to be checkbox nav at mobile size, will instead implement with javascript-->
                                 <ul class="nav-links">
@@ -34,16 +34,17 @@
                                 </ul>
                         </nav>
                 </div>
-
-                <!--TODO: Add video and configure framerate-->
+                <!--Hero Section-->
                 <header class="page-header">
+
+                        <!--TODO: Add video and configure framerate-->
                         <h1>a website that's gone to the dogs</h1>
                         <button class="pop-button"><a href="#">Register</a></button>
                 </header>
-                <!--CSS Section naming conventions needs to be adjusted-->
+                <!--Main Content-->
                 <main>
                         <!--About-->
-                        <section class="container-grid-about">
+                        <section class="container-about">
                                 <div>
                                         <h2>I'm Kira</h2>
                                         <p>Hey, I'm Kira! and I consider myself an expert on all things doggy delicious and fun. My two humans live with me, they make special food just for me and take me to the best spots in Calgary</p>
@@ -55,27 +56,32 @@
                         </section>
 
                         <!--Gallery Teaser-->
+                        <section class="container-grid-photo">
                                 <!--To be replaced with by a blog update space-->
-                                <section class="container-grid-photo">
-                                        <h2>My Favourite Photos</h2>
-                                        <p>Photogenic, right? I will be updating my site with many cute pictures like these.</p>
-                                        <img src="assets/images/grass-happy-kira-3.jpg" class="gallery-photo"alt="">
-                                        <img src="assets/images/ears-kira.jpg" class="tall-rect-image" class="gallery-photo"alt="">
-                                        <img src="assets/images/watchdog-kira-1.jpg" class="gallery-photo" alt="">
+                                <h2>My Favourite Photos</h2>
+                                <p>Photogenic, right? I will be updating my site with many cute pictures like these.</p>
+                                <img src="assets/images/grass-happy-kira-3.jpg" class="gallery-photo"alt="">
+                                <img src="assets/images/ears-kira.jpg" class="tall-rect-image" class="gallery-photo"alt="">
+                                <img src="assets/images/watchdog-kira-1.jpg" class="gallery-photo" alt="">
 
 
-                                        <div>
+                                <div>
                                         <button><a href="gallery.html">More Cuteness</a></button>
-                                        </div>
-                                </section>
+                                </div>
+                        </section>
+                        <!--Recipe Section-->
 
+                        <!--This will be on it's own page and replaced with a grid of cards for each recipe-->
                         <section class="container-grid-recipe">
+
+                                <!--Title-->
                                 <div>
                                         <h2>Recipe<h2>
                                                         <hr>
                                                         <h3 class="big-h3">I Love Poultry Pour Over</h3>
                                                         <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
                                 </div>
+                                <!--Overview-->
                                 <div class="recipe-images">
                                         <div class="image-placeholder">Image</div>
                                         <div>
@@ -85,6 +91,7 @@
                                                 <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
                                         </div>
                                 </div>
+
                                 <aside class="recipe-outline">
                                         <h3>Outline</h3>
                                         <ul>
@@ -94,7 +101,7 @@
                                         </ul>
                                 </aside>
 
-                                <!--instruction steps-->
+                                <!--Ingredients-->
                                 <div class="ingredients">
                                         <h3>Ingredients</h3>
                                         <ul>
@@ -104,6 +111,7 @@
                                                 <li>water</li>
                                         </ul>
                                 </div>
+                                <!--Instructions-->
                                 <article>
 
                                         <ol>
@@ -122,14 +130,14 @@
                                                 </li>
                                                 <li><h3>Put it together</h3>
                                                         <ul>
-                                                        <li>Mix the frozen vegetables, chopped meat, and rice together</li>
-                                                        <li>Portion into 3 day batches</li>
-                                                        <li>Let the pourover mixture cool</li>
-                                                        <li>Freeze anything that you won't use in the next 3 days</li>
-                                                </ul>
-                                        </li>
-                                </ol>
-                        </article>
+                                                                <li>Mix the frozen vegetables, chopped meat, and rice together</li>
+                                                                <li>Portion into 3 day batches</li>
+                                                                <li>Let the pourover mixture cool</li>
+                                                                <li>Freeze anything that you won't use in the next 3 days</li>
+                                                        </ul>
+                                                </li>
+                                        </ol>
+                                </article>
                                 <!--Concluding Notes-->
                                 <div class="recipe-footer">
                                         <div class>
@@ -142,7 +150,7 @@
                                 </div>
                         </section>
 
-                                <!--Thank you section-->
+                        <!--Thank you section-->
                         <section class="container-conclusion">
                                 <h2>Make a dog happy</h2>
                                 <!--Bone icon-->
@@ -150,9 +158,10 @@
                                 <p>I am so excited for you to laugh and learn from my exploits. If you like my content, you can buy me a bone. It'll make me a real happy hound!</p>
                                 <button><a href="#">Buy Me a bone</a></button>
                         </section>
-                        <!--Copyright information-->
                 </main>
+                <!--Footer-->
                 <footer>
+                        <!--Copyright Information-->
                         <p>Ashlyn Knox 29-01-2021 &#169;</p>
                 </footer>
         </body>
