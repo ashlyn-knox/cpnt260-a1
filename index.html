@@ -9,7 +9,9 @@
 
                 <!--Fonts-->
                 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap" rel="stylesheet"> 
+                <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,700&display=swap" rel="stylesheet"> 
+                <!--Icons-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
                 <!--navigation-->
@@ -35,24 +37,24 @@
                                         <li><a href="https://github.com/ashlyn-knox">Contact</a></li>
                                 </ul>
                                 <!--login icon-->
-                                <a href="#"><i clas="fas fa-dog"></i></a>
                         </nav>
                 </div>
                 <!--desktop header will be a video of dogs playing, mobile version will use a static image.-->
                 <!--TODO: Add video and configure framerate-->
                 <header class="page-header">
-                        <h1>Welcome Home</h1>
-                        <button><a href="#">Register</a></button>
+                        <h1>a website that's gone to the dogs</h1>
+                        <button class="pop-button"><a href="#">Register</a></button>
                 </header>
                 <!--CSS Section naming conventions needs to be adjusted-->
                 <main>
                         <!--About-->
                         <section class="container-grid-about">
-                                <h2>Meet Kira</h2>
-                                <img src="assets/images/computer-kira-4.jpg" class="" alt="Kira sitting behind a laptop">
                                 <div>
-                                <p>Hey, I'm Kira! and I consider myself an expert on all things doggy delicious and fun. My two humans live with me, they make special food just for me and take me to the best spots in Calgary</p>
-                                <p>My page is full of cool dog stuff. From <strong>recipes</strong> that your dog is bound to love to <strong>reviews</strong> of Calgary's dog parks, to <strong>amazing stories</strong> from my adventures; I've got it all.</p>
+                                        <h2>I'm Kira</h2>
+                                        <p>Hey, I'm Kira! and I consider myself an expert on all things doggy delicious and fun. My two humans live with me, they make special food just for me and take me to the best spots in Calgary</p>
+                                        <p>My page is <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">full of cool dog stuff. From <strong>recipes</strong> that your dog is bound to love to <strong>reviews</strong> of Calgary's dog parks, to <strong>amazing stories</strong> from my adventures; I've got it all.</p>
+                                        <img src="assets/images/computer-kira-4.jpg" class="about-picture" alt="Kira sitting behind a laptop">
+
                                 </div>
                                 <!--Create a hierarchy of breadcrumbs to lead the user down the site, have one of those here-->
                         </section>
@@ -74,24 +76,26 @@
 
                         <!--Recipe TODO: RECONSIDER MAIN HIERARCHY-->
                         <section>
-                        <article class="container-grid-recipe">
-                                <div>
-                                        <h2>I Love Poultry Pour Over</h2>
-                                        <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
-                                </div>
-                                <div class="recipe-images">
-                                        <div class="image-placeholder">Image</div>
+                                <article class="container-grid-recipe">
                                         <div>
-                                                <!--these images are slowing down the page really badly: I think it has to do with the resolution and quality-->
-                                                <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
-                                                <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
-                                                <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
+                                                <h2>Recipe<h2>
+                                                                <hr>
+                                                                <h3 class="big-h3">I Love Poultry Pour Over</h3>
+                                                                <p>This is some tasty goop that they pour ontop of my kibble, I like it, it makes my kibble yummy. I can never decide if I like chicken or turkey better</p>
                                         </div>
-                                </div>
-                                <aside>
-                                        <h3>Outline</h3>
-                                        <ul>
-                                                <li>Prep: 20min</li>
+                                        <div class="recipe-images">
+                                                <div class="image-placeholder">Image</div>
+                                                <div>
+                                                        <!--these images are slowing down the page really badly: I think it has to do with the resolution and quality-->
+                                                        <img src="assets/images/rice.jpg" class="thumbnail" alt="Uncooked Rice">
+                                                        <img src="assets/images/chicken.jpg" class="thumbnail"alt="Coked Chicken">
+                                                        <img src="assets/images/sweet-potatos.jpg" class="thumbnail" alt="Sweet Potatos">
+                                                </div>
+                                        </div>
+                                        <aside>
+                                                <h3>Outline</h3>
+                                                <ul>
+                                                        <li>Prep: 20min</li>
                                                 <li>Cook: 1hr</li>
                                                 <li>Servings: 8 Meals</li>
                                         </ul>

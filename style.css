@@ -5,7 +5,7 @@
         --lightGreen: hsla(120, 77%, 93%, 0.7);
         --green: hsla(120, 70%, 70%, 1);
         --white: hsl(268, 2%, 95%);
-        --purple: hsl(268, 70%, 70%);
+        --purple: hsl(268, 60%, 60%);
         --black: hsl(0, 100%, 2%);
 }
 /*Images and Shapes*/
@@ -19,11 +19,14 @@
         align-items: center;
         font-weight: 600;
 }
-
+.about-picture {
+        max-height: 20rem;
+}
 img {
         object-fit: cover;
         max-height: 12rem;
 }
+
 .thumbnail {
         width: 58px;
 }
@@ -89,6 +92,8 @@ main > :nth-child(even) {
 }
 .container-grid-photo > p {
         grid-area: text;
+     
+
 }
 .container-grid-photo > :nth-child(3) {
         grid-area: col1;
@@ -103,11 +108,14 @@ main > :nth-child(even) {
         text-align: center;
         padding: 5rem;
 }
+/*ingredients*/
 .container-grid-recipe > :nth-child(4) {
         border: solid 1px;
         justify-content: center;
+        padding: 1rem;
 
 }
+/*instructions*/
 .container-grid-recipe > :nth-child(5) {
         background-color: lightgrey;
         padding: 5rem;
@@ -150,6 +158,8 @@ main > :nth-child(even) {
         align-content: center;
 }
 .container-grid-recipe > :nth-child(1) {
+     
+
         align-self: center;
         justify-self: center;
         text-align: center;
@@ -168,7 +178,9 @@ main > :nth-child(even) {
         justify-content: flex-end;
         align-items: center;
 }
-
+.page-header > h1 {
+        font-variant: small-caps; 
+}
 footer {
         background-color: var(--black);
         color: var(--white);
@@ -188,12 +200,6 @@ footer {
 }
 /*Navigation*/
 
-nav {
-        /*for older browsers*/
-        display: inline;
-
-}
-
 .top-bar {
         width: 100vw;
         margin: 0;
@@ -202,8 +208,31 @@ nav {
         flex-direction: row;
         background-color: var(--black);
 }
+
+.container-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-grow: 1;
+}
+
+.nav-links {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        color: white;
+        font-size: 12px;
+        margin-right: 1rem;
+}
+
+/*Site Logo*/
+
 .site-logo {
+        margin: 2rem;
+        padding: 5px;
+
         align-self: center;
+
         display:grid;
         align-items: center;
         grid-template-columns: max-content max-content;
@@ -228,32 +257,20 @@ nav {
         grid-area: four;
         justify-self:end;
 }
-.site-logo > :nth-child(5) {
+.block {
         grid-area: five;
         height: 5px;
-        width: 39px;
+        width: 38px;
         color: var(--white);
         background-color: hsl(218, 4%, 87%);
         align-self: center;
         justify-self: center;
-        flex-shrink: 1;
+}
+.site-logo span {
+        color: var(--white);
 }
 
-.container-nav {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-grow: 1;
-}
 
-.nav-links {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        color: white;
-        font-size: 12px;
-        margin-right: 1rem;
-}
 
 /*TODO: Set up keyframes for slow color on hover for all links -- nav links are to be faster, buttons slower*/
 
@@ -375,8 +392,11 @@ p {
 a {
         text-decoration: none;
 
-/* Links */
 }
+.big-h3 {
+        font-size: 4rem;
+}
+/* Links */
 .nav-links a {
         color: var(--white);
         font-weight: 500;
@@ -385,21 +405,35 @@ a {
 }
 .nav-links li {
         margin: 5px;
+        list-style-type: none;
 }
 .nav-links a:hover {
         background-color: var(--purple);
         color: hsl(268, 0%, 100%);
 
 }
-.site-logo span {
-        color: var(--white);
-}
-
 
 button {
+        background-color: var(--black);
+        color: white;
         width: 8rem;
-        border-radius: 10px;
-        margin: 10px;
+        margin: 20px;
+        border: none;
+        border-radius: 20px;
+        padding: 5px 20px 5px 20px;
 }
+button:hover {
+        background-color: var(--purple);
+        color: hsl(268, 0%, 100%);
+}
+button a {
+        color: var(--white);
+}
+.pop-button {
+        background-color: var(--purple);
+        font-weight: 600;
+}
+
 /*User Interaction*/
+
 
