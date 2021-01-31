@@ -39,3 +39,4 @@ They clients have decided that if they enjoy using it, they would like to expand
  * I placed the Registration call to action within the Hero section. It made the header feel cluttered and draws attention better in its current position.
 
 ### HTML
+* At my time of submission, I didn't fully understand how to fx an error that I was getting regarding nesting a button inside an <a>. I have since changed the buttons to be <input type=button> etc which can be seen in my code on github

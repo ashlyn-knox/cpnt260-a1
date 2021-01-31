@@ -470,27 +470,38 @@ a {
   }
 }
 /* Buttons */
-button {
+.button {
   background-color: var(--black);
   color: white;
-  width: 8rem;
   margin: 20px;
   border: none;
   border-radius: 20px;
-  padding: 5px 20px 5px 20px;
-}
+  padding: 10px 16px;
 
-button:hover {
+}
+[value] {
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.button:hover {
   animation-name: button-hover;
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
-button a {
+.button a {
   color: var(--white);
 }
 .pop-button {
   background-color: var(--purple);
-  font-weight: 600;
+  color: white;
+
+  margin: 20px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+
 }
 
 .pop-button:hover {
